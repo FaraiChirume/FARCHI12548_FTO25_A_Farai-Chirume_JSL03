@@ -28,4 +28,19 @@ const MAX_NEW_TASKS = 3;
  * Prompts the user to enter task details (title, description, and status).
  * Validates the status input and returns a task object with a unique ID.
  */
+function createTask(id) {
+  const title = prompt(`Enter the title for task ${id}:`);
+  const description = prompt(`Enter the description for task ${id}:`);
+
+  let status = prompt(`Enter the status for task ${id} (todo, doing, done):`).toLowerCase();
+
+  // Validate the status input
+  while (!["todo", "doing", "done"].includes(status)) {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+    status = prompt(`Enter the status for task ${id} (todo, doing, done):`).toLowerCase();
+  }
+
+  return { id, title, description, status };
+}
+
 
