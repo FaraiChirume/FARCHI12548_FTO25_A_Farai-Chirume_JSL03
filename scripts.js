@@ -43,4 +43,29 @@ function createTask(id) {
   return { id, title, description, status };
 }
 
+/**
+ * Called when user clicks "Add New Tasks" button.
+ * Permits user to input up to 3 new tasks.
+ */
+function addNewTasks() {
+  let newTaskCount = 0;
+  let lastId = tasks[tasks.length - 1]?.id || 3;
+
+  while (newTaskCount < MAX_NEW_TASKS) {
+    const newTask = createTask(lastId + 1);
+    tasks.push(newTask);
+    newTaskCount++;
+    lastId++;
+
+    if (newTaskCount === MAX_NEW_TASKS) {
+      alert("There are enough tasks on your board, please check them in the console.");
+    }
+  }
+
+  // Log all tasks and completed tasks
+  logAllTasks();
+  logCompletedTasks();
+}
+
+
 
