@@ -75,6 +75,15 @@ function logAllTasks() {
   console.log(tasks);
 }
 
+/**
+ * Filters and logs only the completed tasks (status: "done").
+ */
+function logCompletedTasks() {
+  const completed = tasks.filter(task => task.status === "done");
+  console.log("Completed tasks:");
+  console.log(completed);
+}
+
 
 
 
