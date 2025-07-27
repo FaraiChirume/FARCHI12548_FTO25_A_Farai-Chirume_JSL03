@@ -1,4 +1,7 @@
-const initialTasks = [
+// ===========================================
+// Initial Tasks (IDs 1–3 only)
+// ===========================================
+const tasks = [
   {
     id: 1,
     title: "Launch Epic Career",
@@ -15,10 +18,10 @@ const initialTasks = [
     id: 3,
     title: "Contribute to Open Source Projects",
     description:
-      "Gain practical experience and collaborate with others in the software development community",
+    "Gain practical experience and collaborate with others in the software development community",
     status: "done",
   },
-  // IDs 4, 5, 6 will be added dynamically by user input
+ // IDs 4, 5, 6 will be added dynamically by user input
 ];
 
 // Limit the number of new tasks user can add at once
@@ -45,7 +48,7 @@ function createTask(id) {
 
 /**
  * Called when user clicks "Add New Tasks" button.
- * Permits user to input up to 3 new tasks.
+ * Allows user to input up to 3 new tasks.
  */
 function addNewTasks() {
   let newTaskCount = 0;
@@ -83,8 +86,3 @@ function logCompletedTasks() {
   console.log("Completed tasks:");
   console.log(completed);
 }
-
-
-
-
-
