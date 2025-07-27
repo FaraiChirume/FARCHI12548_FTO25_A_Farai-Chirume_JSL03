@@ -67,5 +67,15 @@ function addNewTasks() {
   logCompletedTasks();
 }
 
+/**
+ * Logs all tasks to the console with clear label.
+ */
+function logAllTasks() {
+  console.log("All tasks:");
+  console.log(tasks);
+}
+
+
+
 
 
